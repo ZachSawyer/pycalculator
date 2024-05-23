@@ -8,8 +8,6 @@ def display_title():
     print(padded_text)
 
 display_title()
-print("Hello World!")
-print("Git Push/Pull? Test")
 input()
 
 
