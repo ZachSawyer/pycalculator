@@ -8,6 +8,7 @@ def display_title():
     print(padded_text)
 
 display_title()
+print("Hello World!")
 input()
 
 
