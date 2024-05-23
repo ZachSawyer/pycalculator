@@ -4,7 +4,7 @@ os.system("cls")
 
 def display_title():
     title = "Calculator"
-    padded_text = title.center(150)
+    padded_text = title.center(200)
     print(padded_text)
 
 def question_loop():
@@ -15,7 +15,8 @@ def question_loop():
     num1 = int(userResponse1)
     num2 = int(userResponse2)
     total = num1 + num2
-    print("Your total is:",total)
+    print(f"{num1} + {num2} = {total}")
+    return total
 
 display_title()
 print("\n")
