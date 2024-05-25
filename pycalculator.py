@@ -8,18 +8,17 @@ def display_title():
     print(padded_text)
 
 def question_loop():
-    try:
-        print("Please type a number you would like to add.")
-        userResponse1 = input()
-        print("Thank you. Now type in a second number")
-        userResponse2 = input()
-        num1 = int(userResponse1)
-        num2 = int(userResponse2)
-        total = num1 + num2
-        print(f"{num1} + {num2} = {total}")
-        return total
-    except ValueError:
-        print("Invalid input. Please enter a number.")
+    print("Please type a number you would like to add.")
+    userResponse1 = input()
+    print("Thank you. Now type in a second number")
+    userResponse2 = input()
+    num1 = int(userResponse1)
+    num2 = int(userResponse2)
+    total = num1 + num2
+    print(f"{num1} + {num2} = {total}")
+    return total
+    
+print("git add nvim testt.")
 
 display_title()
 print("\n")
