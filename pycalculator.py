@@ -1,6 +1,7 @@
 import os
 
-os.system("cls")
+def screen_clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 def display_title():
     title = "Calculator"
@@ -12,29 +13,29 @@ def question_loop():
         try:
             print("Type the first number to add.")
             num1 = int(input())
-            os.system("cls")
+            screen_clear()
         except ValueError:
-            os.system("cls")
+            screen_clear()
             print("Please enter a valid number.")
-            print("Press any key to contine...")
+            print("Press enter to contine...")
             input()
-            os.system("cls")
+            screen_clear()
             continue
         try:
             print("Type a second number to add.")
             num2 = int(input())
-            os.system("cls")
+            screen_clear()
         except ValueError:
-            os.system("cls")
+            screen_clear()
             print("Please enter a valid number.")
-            print("Press any key to contine...")
+            print("Press enter to contine...")
             input()
-            os.system("cls")
+            screen_clear()
             continue
         print(f'{num1} + {num2} = {num1 + num2}')
         break
         
-
+screen_clear()
 display_title()
 question_loop()
 input()
