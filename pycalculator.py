@@ -11,8 +11,7 @@ def display_title():
 def question_loop():
     while True:
         try:
-            print("Type the first number to add.")
-            num1 = int(input())
+            num1 = int(input("Type the first number to add.\n"))
             screen_clear()
         except ValueError:
             screen_clear()
@@ -22,8 +21,7 @@ def question_loop():
             screen_clear()
             continue
         try:
-            print("Type a second number to add.")
-            num2 = int(input())
+            num2 = int(input("Type a second number to add.\n"))
             screen_clear()
         except ValueError:
             screen_clear()
@@ -36,7 +34,6 @@ def question_loop():
         break
         
 screen_clear()
-display_title()
 question_loop()
 input()
 
