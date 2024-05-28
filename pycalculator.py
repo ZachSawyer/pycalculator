@@ -4,24 +4,41 @@ os.system("cls")
 
 def display_title():
     title = "Calculator"
-    padded_text = title.center(200)
+    padded_text = title.center(250)
     print(padded_text)
 
 def question_loop():
-    print("Please type a number you would like to add.")
-    userResponse1 = input()
-    print("Thank you. Now type in a second number")
-    userResponse2 = input()
-    num1 = int(userResponse1)
-    num2 = int(userResponse2)
-    total = num1 + num2
-    print(f"{num1} + {num2} = {total}")
-    return total
+    while True:
+        try:
+            print("Type the first number to add.")
+            num1 = int(input())
+            os.system("cls")
+        except ValueError:
+            os.system("cls")
+            print("Please enter a valid number.")
+            print("Press any key to contine...")
+            input()
+            os.system("cls")
+            continue
+        try:
+            print("Type a second number to add.")
+            num2 = int(input())
+            os.system("cls")
+        except ValueError:
+            os.system("cls")
+            print("Please enter a valid number.")
+            print("Press any key to contine...")
+            input()
+            os.system("cls")
+            continue
+        print(f'{num1} + {num2} = {num1 + num2}')
+        break
+        
 
 display_title()
-print("\n")
-print("\n")
 question_loop()
 input()
+
+
 
 
